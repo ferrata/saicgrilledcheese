@@ -51,9 +51,6 @@ function uncheckAll() {
   const pictures = document.querySelectorAll('.picture');
   pictures.forEach(picture => {
     picture.addEventListener('drag', checkOrder);
-    picture.addEventListener('dragstart', (e) => {
-      e.dataTransfer.setData('text/plain', index);
-    } )
   
   });
 
@@ -93,24 +90,5 @@ images.forEach((image) => {
 });
 
 const correctOrder = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'];
+
 const checkboxes = document.querySelectorAll('.checkbox');
-
-// Attempting to update order and checkboxes
-
-picture.addEventListener('drop', (e) => {
-  e.preventDefault();
-  const draggedIndex = e.dataTransfer.getData('text/plain');
-  const droppedIndex = index;
-  const pictureList = Arrary.from(pictures);
-  const newOrder = picturelist.map((picture, index) => {
-    if (index == draggedIndex) {
-      return pictureList[droppedIndex].getAttribute('data-step');
-    } else if (index == droppedIndex) {
-      return pictureList[draggedIndex].getAttribute('data-step');
-    } else {
-      return picture.getAttribute('data-step');
-    }
-    });
- 
-
-  })
