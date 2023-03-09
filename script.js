@@ -114,3 +114,6 @@ picture.addEventListener('drop', (e) => {
  
 
   })
+
+  var currentOrder = Array.from(document.querySelectorAll("img")).map((el)=>el.src);
+  var targetOrder = currentOrder.sort(); // sort alphabetically
