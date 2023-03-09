@@ -40,3 +40,10 @@ function getDragAfterElement(container, y) {
 
    }, {offset: Number.NEGATIVE_INFINITY}).element
 }
+
+function uncheckAll() {
+    document.querySelectorAll('input[type="checkbox"]')
+      .forEach(el => el.checked = false);
+  }
+  
+  document.querySelector('button').addEventListener('click', uncheckAll)
