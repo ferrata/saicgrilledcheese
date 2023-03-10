@@ -92,7 +92,8 @@ images.forEach((image) => {
   });
 });
 
-const correctOrder = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'];
+const correctOrder = ['<img src="./images/01a_pan_off.png" class="draggable" draggable="true" height="300" width="300">', '<img src="./images/01b_pan_on.png" class="draggable" draggable="true" height="300" width="300">', '<img src="./images/02_butter_bread.png" class="draggable" draggable="true" height="300" width="300">',  '<img src="./images/03a_bread_in_pan.png" class="draggable" draggable="true" height="300" width="300">', '<img src="./images/04_buttered_bread_on_top.png" class="draggable" draggable="true" height="300" width="300">', '<img src="./images/05_flip.png" class="draggable" draggable="true" height="300" width="300">'];
+
 const checkboxes = document.querySelectorAll('.checkbox');
 
 // Attempting to update order and checkboxes
@@ -111,6 +112,8 @@ picture.addEventListener('drop', (e) => {
       return picture.getAttribute('data-step');
     }
     });
- 
 
   })
+
+  // add drop event lister
+
