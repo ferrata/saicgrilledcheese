@@ -10,14 +10,15 @@ body {
 .container {
     background-color: #FFFBF3;
     padding: 1rem;
-    margin-top: 1rem;
 }
 
-.draggable {
+.container .draggable {
     padding: 1rem;
     background-color: #5998A3;
     border: 1px solid black;
     cursor: move;
+    height: 300px;
+    width: 300px;
 }
 
 .draggable.dragging {
