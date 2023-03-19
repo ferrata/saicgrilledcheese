@@ -58,7 +58,7 @@ function uncheckAll() {
   });
 
   // Get all the images and the checklist
-// const images = document.querySelectorAll('.image-container img');
+const images = document.querySelectorAll('.image-container img');
 const checklistItems = document.querySelectorAll('.checklist li');
 
 // Add drag and drop functionality to each image
@@ -97,22 +97,22 @@ const correctOrder = ['<img src="./images/01a_pan_off.png" class="draggable" dra
 const checkboxes = document.querySelectorAll('.checkbox');
 // Attempting to update order and checkboxes
 
-picture.addEventListener('drop', (e) => {
-  e.preventDefault();
-  const draggedIndex = e.dataTransfer.getData('text/plain');
-  const droppedIndex = index;
-  const pictureList = Arrary.from(pictures);
-  const newOrder = picturelist.map((picture, index) => {
-    if (index == draggedIndex) {
-      return pictureList[droppedIndex].getAttribute('data-step');
-    } else if (index == droppedIndex) {
-      return pictureList[draggedIndex].getAttribute('data-step');
-    } else {
-      return picture.getAttribute('data-step');
-    }
-    });
+// picture.addEventListener('drop', (e) => {
+//   e.preventDefault();
+//   const draggedIndex = e.dataTransfer.getData('text/plain');
+//   const droppedIndex = index;
+//   const pictureList = Arrary.from(pictures);
+//   const newOrder = picturelist.map((picture, index) => {
+//     if (index == draggedIndex) {
+//       return pictureList[droppedIndex].getAttribute('data-step');
+//     } else if (index == droppedIndex) {
+//       return pictureList[draggedIndex].getAttribute('data-step');
+//     } else {
+//       return picture.getAttribute('data-step');
+//     }
+//     });
 
-  })
+//   })
 
 
 //   // add drop event lister
