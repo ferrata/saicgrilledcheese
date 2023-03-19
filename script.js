@@ -1,6 +1,8 @@
 const draggables = document.querySelectorAll('.draggable')
 const containers  =  document.querySelectorAll('.container')
 
+refreshCheckboxes();
+
 function getFileNameFromUrl(url) {
   // return a file name from URL, e.g. http://127.0.0.1:8080/images/01b_pan_on.png -> 01b_pan_on.png
   const elements = url.split("/");
