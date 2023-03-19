@@ -1,5 +1,5 @@
-const draggables = document.querySelectorAll('.draggable')
-const containers  =  document.querySelectorAll('.container')
+const draggables = document.querySelectorAll(".draggable");
+const containers = document.querySelectorAll(".container");
 
 refreshCheckboxes();
 
@@ -30,7 +30,7 @@ function refreshCheckboxes() {
   const images = getImagesOrder();
   const checklistItems = document.querySelectorAll(".cbox");
 
-  // compare image on each position with a corresponding checkbox, 
+  // compare image on each position with a corresponding checkbox,
   // update each checkbox with checked true/false
   images.forEach((imageName, index) => {
     const imageStep = getStepFromFileName(imageName);
@@ -56,7 +56,7 @@ containers.forEach((container) => {
     // "dragover" event is empty, but it is needed for "drop" to be possibe
     e.preventDefault();
   });
-  
+
   container.addEventListener("drop", (e) => {
     // "drop" event does the job of swapping images between containers
     e.preventDefault();
